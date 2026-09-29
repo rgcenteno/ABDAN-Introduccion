@@ -4,7 +4,7 @@ theme:
   name: material
   locale: "es"
 nav:
-    - Introduccion: "01-Almacenamiento-Introduccion.md"
+    - Introduccion: "index.md"
     - Bloques: "02-Almacenamiento-bloques.md"
     - Archivos: "03-Almacenamiento-archivos.md"
     - Objetos: "04-Almacenamiento-objetos.md"
