@@ -1,6 +1,6 @@
 # 1. Introducción al almacenamiento de datos
 
-Desde los primeros sistemas informáticos, el almacenamiento ha constituido uno de los pilares fundamentales de la computación. Toda aplicación, servicio o sistema necesita **conservar información*** para poder operar de forma útil y persistente. Sin mecanismos de almacenamiento, los datos desaparecerían al apagar un equipo, limitando enormemente las posibilidades de cualquier sistema informático.
+Desde los primeros sistemas informáticos, el almacenamiento ha constituido uno de los pilares fundamentales de la computación. Toda aplicación, servicio o sistema necesita **conservar información** para poder operar de forma útil y persistente. Sin mecanismos de almacenamiento, los datos desaparecerían al apagar un equipo, limitando enormemente las posibilidades de cualquier sistema informático.
 
 La **evolución** del almacenamiento ha estado estrechamente ligada al crecimiento de las organizaciones y al aumento continuo del volumen de información. A medida que las empresas comenzaron a depender cada vez más de aplicaciones digitales, bases de datos, servicios web y sistemas de comunicación, surgió la necesidad de almacenar mayores cantidades de datos de manera segura, accesible y eficiente.
 
