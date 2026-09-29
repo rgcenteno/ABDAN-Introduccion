@@ -1,5 +1,4 @@
 site_name: "UD0. Repaso general"
-site_url: https://github.io
 theme:
   name: material
   locale: "es"
