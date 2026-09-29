@@ -1,0 +1,13 @@
+site_name: "UD0. Repaso general"
+site_url: https://github.io
+theme:
+  name: material
+  locale: "es"
+nav:
+    - Introduccion: "01-Almacenamiento-Introduccion.md"
+    - Bloques: "02-Almacenamiento-bloques.md"
+    - Archivos: "03-Almacenamiento-archivos.md"
+    - Objetos: "04-Almacenamiento-objetos.md"
+    - Comparativa: "05-Almacenamiento-tabla-comparativa.md"
+    - BBDDR: "06-BBDD-Relacionales-1.md"
+    - NoSQL: "07 - NoSQL.md"
