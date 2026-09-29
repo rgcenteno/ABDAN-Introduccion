@@ -1,0 +1,1419 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rgcenteno.github.io/ABDAN-Introduccion/03-Almacenamiento-archivos/">
+      
+      
+        <link rel="prev" href="../02-Almacenamiento-bloques/">
+      
+      
+        <link rel="next" href="../04-Almacenamiento-objetos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Archivos - UD0. Repaso general</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-almacenamiento-de-archivos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UD0. Repaso general" class="md-header__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UD0. Repaso general
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Archivos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UD0. Repaso general" class="md-nav__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    UD0. Repaso general
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Almacenamiento-bloques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-introduccion-al-almacenamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Introducción al almacenamiento de archivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-de-los-bloques-a-los-archivos-construccion-por-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. De los bloques a los archivos: construcción por capas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-que-es-un-sistema-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Qué es un sistema de archivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-sistemas-de-archivos-mas-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Sistemas de archivos más habituales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Sistemas de archivos más habituales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fat-y-fat32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAT y FAT32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ext4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ext4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#btrfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BTRFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xfs-y-zfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XFS y ZFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-almacenamiento-de-archivos-y-almacenamiento-de-archivos-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Almacenamiento de archivos y almacenamiento de archivos en red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Almacenamiento de archivos y almacenamiento de archivos en red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento de archivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-archivos-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento de archivos en red
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-protocolos-de-acceso-al-almacenamiento-de-archivos-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Protocolos de acceso al almacenamiento de archivos en red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Protocolos de acceso al almacenamiento de archivos en red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-nfs-network-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.1. NFS (Network File System)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-smbcifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2. SMB/CIFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-comparticion-de-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7. Compartición de ficheros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-casos-de-uso-del-almacenamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8. Casos de uso del almacenamiento de archivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8. Casos de uso del almacenamiento de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#381-directorios-corporativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.1. Directorios corporativos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#382-aplicaciones-compartidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.2. Aplicaciones compartidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#383-home-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.3. Home Directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-ventajas-e-inconvenientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9. Ventajas e inconvenientes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9. Ventajas e inconvenientes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconvenientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-equivalencia-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10. Equivalencia en AWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10. Equivalencia en AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3101-amazon-elastic-file-system-efs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10.1. Amazon Elastic File System (EFS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3102-amazon-fsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10.2. Amazon FSx
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-Almacenamiento-objetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objetos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Almacenamiento-tabla-comparativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-BBDD-Relacionales-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BBDDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20NoSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NoSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-introduccion-al-almacenamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Introducción al almacenamiento de archivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-de-los-bloques-a-los-archivos-construccion-por-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. De los bloques a los archivos: construcción por capas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-que-es-un-sistema-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Qué es un sistema de archivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-sistemas-de-archivos-mas-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Sistemas de archivos más habituales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Sistemas de archivos más habituales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fat-y-fat32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAT y FAT32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ext4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ext4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#btrfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BTRFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xfs-y-zfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XFS y ZFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-almacenamiento-de-archivos-y-almacenamiento-de-archivos-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Almacenamiento de archivos y almacenamiento de archivos en red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Almacenamiento de archivos y almacenamiento de archivos en red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento de archivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-archivos-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento de archivos en red
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-protocolos-de-acceso-al-almacenamiento-de-archivos-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Protocolos de acceso al almacenamiento de archivos en red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Protocolos de acceso al almacenamiento de archivos en red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-nfs-network-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.1. NFS (Network File System)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-smbcifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2. SMB/CIFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-comparticion-de-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7. Compartición de ficheros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-casos-de-uso-del-almacenamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8. Casos de uso del almacenamiento de archivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8. Casos de uso del almacenamiento de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#381-directorios-corporativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.1. Directorios corporativos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#382-aplicaciones-compartidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.2. Aplicaciones compartidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#383-home-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.3. Home Directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-ventajas-e-inconvenientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9. Ventajas e inconvenientes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9. Ventajas e inconvenientes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconvenientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-equivalencia-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10. Equivalencia en AWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10. Equivalencia en AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3101-amazon-elastic-file-system-efs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10.1. Amazon Elastic File System (EFS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3102-amazon-fsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10.2. Amazon FSx
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3-almacenamiento-de-archivos">3. Almacenamiento de archivos</h1>
+<h2 id="31-introduccion-al-almacenamiento-de-archivos">3.1. Introducción al almacenamiento de archivos</h2>
+<p>Hasta ahora se ha estudiado el almacenamiento en bloques, donde la información se organiza en bloques de datos accesibles directamente por el sistema operativo. Sin embargo, los usuarios no trabajan habitualmente con bloques, sino con archivos y carpetas.</p>
+<p>Para hacer posible esta organización aparece una capa adicional denominada <strong>sistema de archivos</strong>, responsable de transformar un conjunto de bloques físicos en una estructura comprensible y manejable.</p>
+<p>Comprender el almacenamiento de archivos implica entender varias capas tecnológicas que se construyen unas sobre otras. Esta visión es especialmente importante en entornos cloud, donde conceptos tradicionales como discos, sistemas de archivos y recursos compartidos siguen existiendo, aunque ocultos tras servicios gestionados.</p>
+<h2 id="32-de-los-bloques-a-los-archivos-construccion-por-capas">3.2. De los bloques a los archivos: construcción por capas</h2>
+<p>Uno de los errores más habituales al estudiar almacenamiento consiste en considerar que los archivos existen directamente sobre el hardware. En realidad, existen varias capas intermedias.</p>
+<p>La relación puede representarse de la siguiente forma:</p>
+<p><img alt="image" src="../imgs/capas-sistemas-almacenamiento-1.png" /></p>
+<p>Si además los archivos se comparten a través de la red, aparece una nueva capa:</p>
+<p><img alt="image" src="../imgs/capas-sistemas-almacenamiento-2.png" /></p>
+<p>Si trasladamos esta estructura a la nube de AWS tendríamos algo similar a esto:</p>
+<p><img alt="image" src="../imgs/capas-sistemas-almacenamiento-3.png" /></p>
+<h2 id="33-que-es-un-sistema-de-archivos">3.3. Qué es un sistema de archivos</h2>
+<p>Un sistema de archivos es el <strong>conjunto de estructuras y mecanismos que permiten organizar, almacenar, localizar y recuperar información</strong> dentro de un dispositivo de almacenamiento.</p>
+<p>Cuando un disco se encuentra vacío, <strong>únicamente contiene bloques de datos</strong>. El sistema de archivos es el encargado de decidir qué bloques pertenecen a cada archivo, dónde comienza y termina cada uno y qué información adicional debe almacenarse para gestionarlos correctamente.</p>
+<p>Gracias a él, el sistema operativo puede representar la información mediante <strong>archivos y carpetas</strong> en lugar de trabajar directamente con bloques físicos.</p>
+<p>Entre sus principales responsabilidades se encuentran:</p>
+<ul>
+<li>Organizar archivos y directorios.</li>
+<li>Gestionar el espacio libre disponible.</li>
+<li>Asignar bloques a los archivos.</li>
+<li>Mantener información sobre propietarios y permisos.</li>
+<li>Gestionar fechas de creación y modificación.</li>
+<li>Facilitar la recuperación de los datos.</li>
+</ul>
+<p>Sin un sistema de archivos, todos los datos almacenados serían simplemente una secuencia de bloques sin estructura ni significado aparente.</p>
+<hr />
+<h2 id="34-sistemas-de-archivos-mas-habituales">3.4. Sistemas de archivos más habituales</h2>
+<p>A lo largo de la evolución de la informática han aparecido múltiples sistemas de archivos diseñados para diferentes sistemas operativos y necesidades.</p>
+<h3 id="fat-y-fat32">FAT y FAT32</h3>
+<p>Fueron durante muchos años los sistemas de archivos predominantes en entornos Microsoft.</p>
+<p>Su simplicidad facilitó una amplia compatibilidad entre distintos dispositivos, aunque presentan limitaciones importantes en tamaño máximo de archivos y capacidades de seguridad.</p>
+<p>Actualmente siguen utilizándose en memorias USB y dispositivos embebidos.</p>
+<hr />
+<h3 id="ntfs">NTFS</h3>
+<p>NTFS (<em>New Technology File System</em>) es el sistema de archivos tradicional de los sistemas Windows modernos.</p>
+<p>Introduce características avanzadas como:</p>
+<ul>
+<li>Permisos de seguridad.</li>
+<li>Compresión.</li>
+<li>Cifrado.</li>
+<li>Cuotas de almacenamiento.</li>
+<li>Recuperación ante errores.</li>
+</ul>
+<p>Durante años ha sido el estándar de facto en servidores y estaciones de trabajo Windows.</p>
+<hr />
+<h3 id="ext4">ext4</h3>
+<p>ext4 es uno de los sistemas de archivos más utilizados en Linux.</p>
+<p>Destaca por su estabilidad, rendimiento y fiabilidad. Actualmente constituye el sistema de archivos predeterminado en numerosas distribuciones Linux.</p>
+<p>Muchas infraestructuras cloud basadas en Linux utilizan ext4 como capa de almacenamiento local.</p>
+<hr />
+<h3 id="btrfs">BTRFS</h3>
+<p><strong>Btrfs</strong> es un sistema de archivos moderno desarrollado inicialmente por Oracle para Linux. Su objetivo era ofrecer funcionalidades avanzadas que tradicionalmente requerían herramientas externas o incluso sistemas completos de almacenamiento.</p>
+<p>A diferencia de sistemas más clásicos como ext4, Btrfs no se limita a organizar archivos y directorios, sino que incorpora mecanismos avanzados de gestión de datos, integridad y administración del almacenamiento.</p>
+<p>Entre las características más destacadas se encuentran:</p>
+<ul>
+<li><strong>Snapshots nativos</strong>, capaces de capturar el estado completo de un sistema de archivos en un instante concreto.</li>
+<li><strong>Copy-on-Write (CoW)</strong>, donde los datos modificados se escriben en nuevas ubicaciones antes de reemplazar los originales.</li>
+<li><strong>Subvolúmenes</strong>, que permiten dividir lógicamente el sistema de archivos sin necesidad de crear particiones adicionales.</li>
+<li><strong>Compresión transparente</strong>, reduciendo el espacio ocupado en disco.</li>
+<li><strong>Comprobación de integridad mediante checksums</strong>, detectando corrupciones silenciosas de datos.</li>
+<li><strong>RAID integrado</strong>, sin necesidad de herramientas externas como mdadm.</li>
+<li><strong>Redimensionado dinámico</strong>, tanto ampliando como reduciendo sistemas de archivos en caliente.</li>
+</ul>
+<hr />
+<h3 id="xfs-y-zfs">XFS y ZFS</h3>
+<p>Son sistemas de archivos orientados a entornos empresariales y grandes volúmenes de datos.</p>
+<p>Incorporan funcionalidades avanzadas relacionadas con:</p>
+<ul>
+<li>Escalabilidad.</li>
+<li>Integridad de datos.</li>
+<li>Snapshots.</li>
+<li>Rendimiento en sistemas de almacenamiento masivo.</li>
+</ul>
+<p>Su utilización es habitual en centros de datos y plataformas de almacenamiento de altas prestaciones.</p>
+<h2 id="35-almacenamiento-de-archivos-y-almacenamiento-de-archivos-en-red">3.5. Almacenamiento de archivos y almacenamiento de archivos en red</h2>
+<p>En este punto es importante diferenciar dos conceptos que suelen confundirse.</p>
+<h3 id="almacenamiento-de-archivos">Almacenamiento de archivos</h3>
+<p>Se refiere al modelo lógico mediante el cual la información se organiza en archivos y directorios gracias a un sistema de archivos.</p>
+<p><img alt="image" src="../imgs/almacenamiento-archivos-diagrama.png" /></p>
+<p>En este caso existe almacenamiento de archivos, pero <strong>únicamente es accesible desde el propio equipo</strong>.</p>
+<h3 id="almacenamiento-de-archivos-en-red">Almacenamiento de archivos en red</h3>
+<p>Se produce cuando un sistema de archivos se comparte para que varios equipos puedan acceder simultáneamente a él a través de una red.</p>
+<p><img alt="image" src="../imgs/almacenamiento-archivos-red-diagrama.png" /></p>
+<p>Ahora <strong>varios clientes</strong> pueden utilizar el mismo conjunto de archivos.</p>
+<p>Esta modalidad es la base de gran parte de los sistemas NAS tradicionales y de numerosos servicios cloud modernos.</p>
+<hr />
+<h2 id="36-protocolos-de-acceso-al-almacenamiento-de-archivos-en-red">3.6. Protocolos de acceso al almacenamiento de archivos en red</h2>
+<p>Para que múltiples sistemas puedan acceder a un mismo almacenamiento de archivos es necesario utilizar protocolos de comunicación especializados.</p>
+<p>Estos protocolos permiten que un servidor de archivos comparta información a través de la red y que distintos clientes puedan acceder a ella como si se encontrase almacenada localmente.</p>
+<p>Los dos protocolos más extendidos son <strong>NFS y SMB/CIFS</strong>.</p>
+<hr />
+<h3 id="361-nfs-network-file-system">3.6.1. NFS (Network File System)</h3>
+<p>NFS es un protocolo desarrollado originalmente para sistemas Unix y posteriormente adoptado por gran parte de los entornos Linux.</p>
+<p>Su objetivo es permitir que un sistema remoto acceda a un <strong>directorio compartido de forma transparente</strong>. Desde el punto de vista del cliente, el recurso remoto puede montarse como si fuese una unidad local integrada en el propio sistema operativo.</p>
+<p>Este protocolo se caracteriza por su simplicidad, eficiencia y amplia integración con <strong>sistemas Linux y Unix</strong>.</p>
+<p>A lo largo de los años, NFS ha evolucionado incorporando mejoras relacionadas con el rendimiento, la autenticación y la seguridad, convirtiéndose en una de las soluciones más utilizadas en centros de datos y plataformas cloud.</p>
+<p>Actualmente es frecuente encontrar NFS en entornos como:</p>
+<ul>
+<li>Infraestructuras Linux empresariales.</li>
+<li>Sistemas HPC (<em>High Performance Computing</em>).</li>
+<li>Entornos de virtualización.</li>
+<li>Almacenamiento compartido para aplicaciones corporativas.</li>
+<li>Servicios cloud de almacenamiento de archivos.</li>
+</ul>
+<p>Su uso resulta especialmente habitual cuando varios servidores Linux necesitan acceder simultáneamente a la misma información.</p>
+<hr />
+<h3 id="362-smbcifs">3.6.2. SMB/CIFS</h3>
+<p>SMB (<em>Server Message Block</em>) es el protocolo <strong>tradicionalmente asociado a los sistemas Microsoft Windows</strong>.</p>
+<p>Su objetivo es proporcionar acceso compartido a archivos, impresoras y otros recursos de red mediante un modelo centralizado de gestión.</p>
+<p>Durante muchos años la implementación CIFS (<em>Common Internet File System</em>) constituyó la versión más extendida de SMB. Actualmente las versiones modernas de SMB incorporan importantes mejoras en rendimiento, cifrado, autenticación y disponibilidad.</p>
+<p>La principal ventaja de SMB radica en su <strong>integración con entornos corporativos basados en Windows y servicios de directorio como Active Directory</strong>.</p>
+<p>Cuando un usuario accede a una carpeta compartida en una organización, generalmente está utilizando SMB para establecer la comunicación con el servidor de archivos.</p>
+<p>Hoy en día también existen implementaciones compatibles con Linux, macOS y otros sistemas operativos, permitiendo la interoperabilidad entre diferentes plataformas tecnológicas.</p>
+<hr />
+<h2 id="37-comparticion-de-ficheros">3.7. Compartición de ficheros</h2>
+<p>La compartición de ficheros consiste en permitir que varios usuarios o sistemas <strong>accedan a una misma información almacenada de forma centralizada</strong>.</p>
+<p>Este modelo elimina la necesidad de mantener múltiples copias de los mismos documentos en diferentes equipos, favoreciendo la colaboración y simplificando la administración de los datos.</p>
+<p>Cuando un <strong>servidor de archivos</strong> comparte un recurso, los usuarios pueden acceder a él a través de la red utilizando los protocolos adecuados y las credenciales autorizadas.</p>
+<p>La compartición de ficheros suele complementarse con mecanismos de control de acceso que permiten definir:</p>
+<ul>
+<li>Quién puede visualizar la información.</li>
+<li>Quién puede modificarla.</li>
+<li>Quién puede eliminarla.</li>
+<li>Quién puede crear nuevos archivos.</li>
+</ul>
+<p>En los entornos corporativos modernos, estas políticas suelen estar integradas con directorios centralizados de usuarios y grupos.</p>
+<p>La compartición centralizada facilita además la realización de copias de seguridad, la aplicación de políticas de seguridad y la implantación de mecanismos de recuperación ante desastres.</p>
+<p>En los servicios cloud actuales, el almacenamiento de archivos mantiene este mismo enfoque, pero apoyándose en infraestructuras distribuidas y administradas por los proveedores de nube.</p>
+<hr />
+<h2 id="38-casos-de-uso-del-almacenamiento-de-archivos">3.8. Casos de uso del almacenamiento de archivos</h2>
+<h3 id="381-directorios-corporativos">3.8.1. Directorios corporativos</h3>
+<p>Uno de los usos más tradicionales del almacenamiento de archivos consiste en la creación de <strong>directorios corporativos compartidos</strong>.</p>
+<p>Estos espacios permiten almacenar documentación común de la organización, como procedimientos internos, plantillas, documentación técnica o información administrativa.</p>
+<p>Al centralizar la información en un único repositorio se simplifica la gestión documental y se garantiza que todos los usuarios trabajen sobre la misma versión de cada documento.</p>
+<p>Este modelo sigue siendo <strong>ampliamente utilizado</strong> tanto en infraestructuras locales como en entornos cloud empresariales.</p>
+<hr />
+<h3 id="382-aplicaciones-compartidas">3.8.2. Aplicaciones compartidas</h3>
+<p>Muchas aplicaciones requieren acceder simultáneamente a los mismos archivos desde distintos servidores o estaciones de trabajo.</p>
+<p>En estos casos, el almacenamiento de archivos proporciona un repositorio común que puede ser utilizado por múltiples sistemas de manera concurrente.</p>
+<p>Algunos ejemplos habituales son:</p>
+<ul>
+<li>Aplicaciones web distribuidas.</li>
+<li>Plataformas colaborativas.</li>
+<li>Sistemas documentales.</li>
+<li>Aplicaciones empresariales con múltiples servidores.</li>
+<li>Entornos de desarrollo compartidos.</li>
+</ul>
+<p>La capacidad de acceso simultáneo constituye una de las principales razones por las que el almacenamiento de archivos continúa siendo una tecnología esencial en infraestructuras modernas.</p>
+<hr />
+<h3 id="383-home-directories">3.8.3. Home Directories</h3>
+<p>Los <em>home directories</em> son directorios personales asignados a usuarios concretos.</p>
+<p>En lugar de almacenar la información en cada equipo individual, los datos personales del usuario residen en un servidor centralizado accesible desde cualquier dispositivo autorizado.</p>
+<p>Este modelo ofrece numerosas ventajas:</p>
+<ul>
+<li>Centralización de la información.</li>
+<li>Simplificación de copias de seguridad.</li>
+<li>Movilidad entre equipos.</li>
+<li>Administración centralizada.</li>
+<li>Aplicación uniforme de políticas de seguridad.</li>
+</ul>
+<p>Durante años esta estrategia ha sido ampliamente utilizada en universidades, administraciones públicas y grandes organizaciones empresariales.</p>
+<p>En la actualidad, muchos servicios cloud implementan conceptos similares mediante sistemas de almacenamiento de archivos administrados.</p>
+<hr />
+<h2 id="39-ventajas-e-inconvenientes">3.9. Ventajas e inconvenientes</h2>
+<h3 id="ventajas">Ventajas</h3>
+<p>El almacenamiento de archivos se ha mantenido vigente durante décadas debido a su <strong>facilidad de uso</strong> y comprensión.</p>
+<p>Su principal ventaja es que ofrece una <strong>estructura intuitiva basada en carpetas y archivos</strong>, permitiendo a los usuarios localizar fácilmente la información.</p>
+<p>Además, facilita el acceso compartido entre múltiples usuarios y sistemas sin necesidad de configuraciones complejas.</p>
+<p>Otra ventaja significativa es la <strong>posibilidad de aplicar permisos y controles de seguridad a diferentes niveles de la jerarquía de directorios</strong>.</p>
+<p>Asimismo, resulta compatible con una enorme cantidad de aplicaciones y sistemas operativos, convirtiéndose en una solución muy versátil para entornos corporativos.</p>
+<hr />
+<h3 id="inconvenientes">Inconvenientes</h3>
+<p>A medida que aumenta el volumen de información, la estructura jerárquica puede volverse compleja y difícil de administrar.</p>
+<p>Por otra parte, los sistemas de archivos tradicionales <strong>presentan limitaciones cuando se requieren escalas masivas de almacenamiento</strong> similares a las utilizadas por grandes plataformas cloud.</p>
+<p>También <strong>pueden aparecer problemas de rendimiento cuando numerosos usuarios acceden simultáneamente</strong> a los mismos recursos compartidos.</p>
+<p>Además, la expansión de estos sistemas <strong>suele requerir mecanismos adicionales de administración y balanceo de carga</strong> para evitar cuellos de botella.</p>
+<p>Por estas razones, para ciertos escenarios de grandes volúmenes de datos o aplicaciones distribuidas se utilizan con frecuencia soluciones de almacenamiento de objetos.</p>
+<hr />
+<h2 id="310-equivalencia-en-aws">3.10. Equivalencia en AWS</h2>
+<p>Los servicios de almacenamiento de archivos en AWS permiten mantener el mismo modelo tradicional de directorios, carpetas y archivos, pero apoyándose en infraestructuras completamente gestionadas y altamente escalables.</p>
+<p>En este módulo, se contempla específicamente el estudio y administración de <strong>Amazon EFS</strong> como equivalente cloud del almacenamiento de archivos tradicional. </p>
+<hr />
+<h3 id="3101-amazon-elastic-file-system-efs">3.10.1. Amazon Elastic File System (EFS)</h3>
+<p><strong>Amazon EFS (Elastic File System)</strong> es el servicio de almacenamiento de archivos administrado de AWS diseñado principalmente para entornos Linux.</p>
+<p>Proporciona un sistema de archivos compartido accesible simultáneamente desde múltiples instancias de Amazon EC2 utilizando el protocolo NFS.</p>
+<p>Desde la perspectiva de los servidores, el sistema se comporta exactamente igual que un sistema de archivos convencional, permitiendo almacenar aplicaciones, datos compartidos y directorios de usuario.</p>
+<p>Entre sus características más destacadas se encuentran:</p>
+<ul>
+<li>Escalado automático de capacidad.</li>
+<li>Alta disponibilidad.</li>
+<li>Integración nativa con AWS.</li>
+<li>Acceso concurrente desde múltiples servidores.</li>
+<li>Administración simplificada.</li>
+</ul>
+<p>Gracias a estas capacidades, Amazon EFS resulta especialmente adecuado para aplicaciones web distribuidas, sistemas empresariales compartidos y entornos de desarrollo colaborativo. La administración de <strong>Amazon EFS</strong> aparece recogida entre los laboratorios principales del módulo de almacenamiento.</p>
+<hr />
+<h3 id="3102-amazon-fsx">3.10.2. Amazon FSx</h3>
+<p><strong>Amazon FSx</strong> es una familia de servicios administrados que proporciona sistemas de archivos compatibles con diferentes tecnologías empresariales.</p>
+<p>A diferencia de Amazon EFS, que está orientado específicamente a entornos NFS y Linux, FSx ofrece implementaciones especializadas para distintos escenarios tecnológicos.</p>
+<p>AWS proporciona diferentes variantes adaptadas a necesidades concretas:</p>
+<ul>
+<li>FSx for Windows File Server.</li>
+<li>FSx for NetApp ONTAP.</li>
+<li>FSx for OpenZFS.</li>
+<li>FSx for Lustre.</li>
+</ul>
+<p>Estas soluciones permiten migrar a la nube sistemas de archivos empresariales tradicionales manteniendo compatibilidad con aplicaciones y flujos de trabajo ya existentes.</p>
+<p>Su utilización resulta especialmente interesante en organizaciones que necesitan integrar infraestructuras locales y cloud sin modificar significativamente su arquitectura de almacenamiento.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

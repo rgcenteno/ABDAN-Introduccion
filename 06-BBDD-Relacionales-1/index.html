@@ -1,0 +1,1715 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rgcenteno.github.io/ABDAN-Introduccion/06-BBDD-Relacionales-1/">
+      
+      
+        <link rel="prev" href="../05-Almacenamiento-tabla-comparativa/">
+      
+      
+        <link rel="next" href="../07%20-%20NoSQL/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>BBDDR - UD0. Repaso general</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-bases-de-datos-relacionales" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UD0. Repaso general" class="md-header__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UD0. Repaso general
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BBDDR
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UD0. Repaso general" class="md-nav__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    UD0. Repaso general
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Almacenamiento-bloques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-Almacenamiento-archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-Almacenamiento-objetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objetos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Almacenamiento-tabla-comparativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BBDDR
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BBDDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-modelo-relacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El modelo relacional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claves-primarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves primarias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claves-foraneas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves foráneas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claves foráneas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pedidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacion-uno-a-uno-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación uno a uno (1:1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-uno-a-muchos-1n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación uno a muchos (1:N)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-muchos-a-muchos-nm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación muchos a muchos (N:M)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL básico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-tabla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear una tabla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertar-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insertar registros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordenar-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordenar resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eliminar registros
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-practico-diseno-de-una-base-de-datos-sencilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso práctico: diseño de una base de datos sencilla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso práctico: diseño de una base de datos sencilla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla Clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla Pedidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-practico-consultas-sql-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso práctico: consultas SQL básicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso práctico: consultas SQL básicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtener-todos-los-clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener todos los clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-todos-los-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener todos los pedidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-pedidos-con-informacion-del-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener pedidos con información del cliente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-sistemas-gestores-de-bases-de-datos-relacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de sistemas gestores de bases de datos relacionales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de sistemas gestores de bases de datos relacionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oracle Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20NoSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NoSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-modelo-relacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El modelo relacional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claves-primarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves primarias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claves-foraneas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves foráneas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claves foráneas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pedidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacion-uno-a-uno-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación uno a uno (1:1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-uno-a-muchos-1n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación uno a muchos (1:N)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-muchos-a-muchos-nm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación muchos a muchos (N:M)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL básico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-tabla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear una tabla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertar-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insertar registros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordenar-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordenar resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eliminar registros
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-practico-diseno-de-una-base-de-datos-sencilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso práctico: diseño de una base de datos sencilla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso práctico: diseño de una base de datos sencilla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla Clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla Pedidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-practico-consultas-sql-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso práctico: consultas SQL básicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso práctico: consultas SQL básicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtener-todos-los-clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener todos los clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-todos-los-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener todos los pedidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-pedidos-con-informacion-del-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener pedidos con información del cliente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-sistemas-gestores-de-bases-de-datos-relacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de sistemas gestores de bases de datos relacionales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de sistemas gestores de bases de datos relacionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oracle Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-bases-de-datos-relacionales">2. Bases de datos relacionales</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>Las bases de datos relacionales constituyen uno de los pilares fundamentales de la informática moderna. Desde aplicaciones web y sistemas empresariales hasta plataformas de comercio electrónico o servicios en la nube, gran parte de la información que utilizamos diariamente se almacena y gestiona mediante este modelo.</p>
+<p>El modelo relacional fue propuesto por <strong>Edgar F. Codd en 1970</strong> y revolucionó la forma de almacenar información. Su principal ventaja consiste en organizar los datos en <strong>tablas relacionadas</strong> entre sí, permitiendo mantener la integridad de la información y realizar consultas complejas de manera eficiente.</p>
+<p>A diferencia de otros sistemas de almacenamiento, una base de datos relacional no se limita a guardar información. También define las relaciones existentes entre los datos, garantizando que éstos permanezcan consistentes a lo largo del tiempo.</p>
+<hr />
+<h2 id="el-modelo-relacional">El modelo relacional</h2>
+<p>El modelo relacional organiza la información en estructuras denominadas relaciones, que habitualmente se representan mediante tablas.</p>
+<p>Cada tabla almacena información sobre una entidad concreta del sistema. Por ejemplo, en una aplicación de gestión académica podrían existir tablas para alumnos, profesores, asignaturas y matrículas.</p>
+<p>La filosofía del modelo relacional se basa en varios principios:</p>
+<ul>
+<li>La información se almacena en <strong>tablas</strong>.</li>
+<li>Cada tupla (fila) representa un <strong>registro</strong> único.</li>
+<li>Cada <strong>columna</strong> representa un atributo del registro.</li>
+<li>Las <strong>relaciones</strong> entre tablas se establecen <strong>mediante claves</strong>.</li>
+<li>Los datos pueden consultarse utilizando <strong>SQL</strong>.</li>
+</ul>
+<p>Gracias a estos principios, es posible diseñar sistemas complejos manteniendo una estructura organizada y fácil de mantener.</p>
+<hr />
+<h2 id="tablas">Tablas</h2>
+<p>Las tablas son el elemento básico de una base de datos relacional.</p>
+<p>Cada tabla está compuesta por filas y columnas:</p>
+<ul>
+<li>Las filas contienen los registros.</li>
+<li>Las columnas contienen los atributos de cada registro.</li>
+</ul>
+<p>Por ejemplo, una tabla de clientes podría tener la siguiente estructura:</p>
+<table>
+<thead>
+<tr>
+<th>id_cliente</th>
+<th>nombre</th>
+<th>ciudad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ana Pérez</td>
+<td>Vigo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Carlos López</td>
+<td>Pontevedra</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Marta Díaz</td>
+<td>Ourense</td>
+</tr>
+</tbody>
+</table>
+<p>En este caso:</p>
+<ul>
+<li>Cada fila representa un cliente.</li>
+<li>Cada columna almacena una característica del cliente.</li>
+<li>La tabla completa representa la entidad Cliente.</li>
+</ul>
+<p>Las tablas deben diseñarse de forma que cada dato se almacene una única vez, evitando duplicidades innecesarias y facilitando el mantenimiento del sistema.</p>
+<hr />
+<h2 id="claves-primarias">Claves primarias</h2>
+<p>Una clave primaria (Primary Key o PK) es un campo que identifica de forma única cada registro de una tabla.</p>
+<p>No puede existir más de un registro con el mismo valor de clave primaria.</p>
+<p>Tampoco puede contener valores nulos.</p>
+<p>Por ejemplo:</p>
+<table>
+<thead>
+<tr>
+<th>id_cliente</th>
+<th>nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ana Pérez</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Carlos López</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Marta Díaz</td>
+</tr>
+</tbody>
+</table>
+<p>En este caso, <code>id_cliente</code> es la clave primaria.</p>
+<p>Gracias a ella, el sistema puede localizar cualquier registro de forma rápida e inequívoca.</p>
+<p>Las claves primarias suelen ser:</p>
+<ul>
+<li>Números enteros autoincrementales.</li>
+<li>UUID (identificadores únicos universales).</li>
+<li>Códigos internos generados por la aplicación.</li>
+</ul>
+<p>Aunque algunos datos como el DNI o el correo electrónico podrían ser únicos, en la práctica suele utilizarse un identificador artificial para evitar problemas futuros.</p>
+<hr />
+<h2 id="claves-foraneas">Claves foráneas</h2>
+<p>Una clave foránea (Foreign Key o FK) es un campo que establece una relación entre dos tablas.</p>
+<p>Su función es garantizar que un registro haga referencia a otro existente.</p>
+<p>Supongamos las siguientes tablas:</p>
+<h3 id="clientes">Clientes</h3>
+<table>
+<thead>
+<tr>
+<th>id_cliente</th>
+<th>nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ana Pérez</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Carlos López</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pedidos">Pedidos</h3>
+<table>
+<thead>
+<tr>
+<th>id_pedido</th>
+<th>fecha</th>
+<th>id_cliente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>2026-01-15</td>
+<td>1</td>
+</tr>
+<tr>
+<td>102</td>
+<td>2026-01-16</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>En este caso:</p>
+<ul>
+<li><code>id_cliente</code> es clave primaria en la tabla Clientes.</li>
+<li><code>id_cliente</code> es clave foránea en la tabla Pedidos.</li>
+</ul>
+<p>La clave foránea impide que exista un pedido asociado a un cliente inexistente.</p>
+<p>Gracias a este mecanismo se mantiene la integridad referencial de la base de datos.</p>
+<hr />
+<h2 id="relaciones">Relaciones</h2>
+<p>Las relaciones permiten conectar distintas tablas para representar situaciones reales.</p>
+<h3 id="relacion-uno-a-uno-11">Relación uno a uno (1:1)</h3>
+<p>Cada registro de una tabla se relaciona con un único registro de otra.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Persona</li>
+<li>Pasaporte</li>
+</ul>
+<p>Una persona posee un único pasaporte y cada pasaporte pertenece a una única persona.</p>
+<hr />
+<h3 id="relacion-uno-a-muchos-1n">Relación uno a muchos (1:N)</h3>
+<p>Es la relación más frecuente.</p>
+<p>Un registro de la tabla principal puede relacionarse con varios registros de otra tabla.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Un cliente puede realizar muchos pedidos.</li>
+<li>Cada pedido pertenece a un único cliente.</li>
+</ul>
+<p><img alt="image" src="../imgs/ER-1N.png" /></p>
+<hr />
+<h3 id="relacion-muchos-a-muchos-nm">Relación muchos a muchos (N:M)</h3>
+<p>Un registro puede relacionarse con varios registros de otra tabla y viceversa.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Un estudiante cursa varias asignaturas.</li>
+<li>Una asignatura es cursada por varios estudiantes.</li>
+</ul>
+<p>Para implementar esta relación se necesita una tabla intermedia.</p>
+<p><img alt="image" src="../imgs/ER-NM.png" /></p>
+<p>La tabla de unión suele contener las claves primarias de ambas tablas.</p>
+<hr />
+<h2 id="sql-basico">SQL básico</h2>
+<p>SQL (Structured Query Language) es el lenguaje utilizado para interactuar con bases de datos relacionales.</p>
+<p>Permite crear estructuras, insertar datos, modificarlos y consultarlos.</p>
+<h3 id="crear-una-tabla">Crear una tabla</h3>
+<pre><code class="language-sql">CREATE TABLE clientes (  
+    id_cliente INT PRIMARY KEY,  
+    nombre VARCHAR(100),  
+    ciudad VARCHAR(50)  
+);
+</code></pre>
+<p>Esta sentencia crea una tabla llamada <code>clientes</code>.</p>
+<hr />
+<h3 id="insertar-registros">Insertar registros</h3>
+<p>INSERT INTO clientes  </p>
+<p>VALUES (1, 'Ana Pérez', 'Vigo');  </p>
+<p>`</p>
+<p>También podemos insertar varios registros:</p>
+<pre><code class="language-sql">INSERT INTO clientes VALUES  
+(2, 'Carlos López', 'Pontevedra'),
+(3, 'Marta Díaz', 'Cañiza')
+</code></pre>
+<hr />
+<h3 id="consultar-datos">Consultar datos</h3>
+<pre><code class="language-sql">#Obtiene todas las filas y columnas.
+SELECT * FROM clientes; 
+
+#Consultar únicamente algunos campos:
+SELECT nombre, ciudad  
+FROM clientes;
+</code></pre>
+<hr />
+<h3 id="filtrar-resultados">Filtrar resultados</h3>
+<pre><code class="language-sql">SELECT *  
+FROM clientes  
+WHERE ciudad = 'Vigo';
+</code></pre>
+<p>Solo mostrará los clientes de Vigo.</p>
+<hr />
+<h3 id="ordenar-resultados">Ordenar resultados</h3>
+<pre><code class="language-sql">SELECT *  
+FROM clientes  
+ORDER BY nombre;
+</code></pre>
+<p>Ordena los registros alfabéticamente.</p>
+<hr />
+<h3 id="actualizar-datos">Actualizar datos</h3>
+<pre><code class="language-sql">UPDATE clientes  
+SET ciudad = 'Madrid'  
+WHERE id_cliente = 2;
+</code></pre>
+<p>Modifica el valor de un registro existente.</p>
+<hr />
+<h3 id="eliminar-registros">Eliminar registros</h3>
+<pre><code class="language-sql">DELETE FROM clientes  
+WHERE id_cliente = 1;
+</code></pre>
+<p>Elimina el registro seleccionado.</p>
+<hr />
+<h2 id="caso-practico-diseno-de-una-base-de-datos-sencilla">Caso práctico: diseño de una base de datos sencilla</h2>
+<p>Supongamos una pequeña librería que desea gestionar clientes y pedidos.</p>
+<h3 id="tabla-clientes">Tabla Clientes</h3>
+<pre><code class="language-sql">CREATE TABLE clientes (  
+    id_cliente INT PRIMARY KEY,  
+    nombre VARCHAR(100),  
+    email VARCHAR(255)
+);
+</code></pre>
+<h3 id="tabla-pedidos">Tabla Pedidos</h3>
+<pre><code class="language-sql">CREATE TABLE pedidos (  
+    id_pedido INT PRIMARY KEY,  
+    fecha DATE,  
+    id_cliente INT
+);
+
+
+ALTER TABLE clientes
+    ADD FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente) 
+    ON DELETE RESTRICT ON UPDATE CASCADE;
+</code></pre>
+<p>El diseño refleja una relación uno a muchos:</p>
+<ul>
+<li>Un cliente puede realizar muchos pedidos.</li>
+<li>Cada pedido pertenece a un único cliente.</li>
+</ul>
+<p>Este modelo puede ampliarse posteriormente añadiendo productos, categorías, proveedores o métodos de pago.</p>
+<hr />
+<h2 id="caso-practico-consultas-sql-basicas">Caso práctico: consultas SQL básicas</h2>
+<h3 id="obtener-todos-los-clientes">Obtener todos los clientes</h3>
+<pre><code class="language-sql">SELECT * FROM clientes;
+</code></pre>
+<hr />
+<h3 id="obtener-todos-los-pedidos">Obtener todos los pedidos</h3>
+<pre><code class="language-sql">SELECT * FROM pedidos;
+</code></pre>
+<hr />
+<h3 id="obtener-pedidos-con-informacion-del-cliente">Obtener pedidos con información del cliente</h3>
+<pre><code class="language-sql">SELECT
+p.id_pedido,
+p.fecha,
+c.nombre
+FROM pedidos p
+JOIN clientes c
+ON p.id_cliente = c.id_cliente
+</code></pre>
+<p>El operador <code>JOIN</code> permite combinar información de varias tablas relacionadas.</p>
+<p>Resultado:</p>
+<table>
+<thead>
+<tr>
+<th>id_pedido</th>
+<th>fecha</th>
+<th>nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>2026-01-15</td>
+<td>Ana Pérez</td>
+</tr>
+<tr>
+<td>102</td>
+<td>2026-01-16</td>
+<td>Carlos López</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejemplos-de-sistemas-gestores-de-bases-de-datos-relacionales">Ejemplos de sistemas gestores de bases de datos relacionales</h2>
+<h3 id="postgresql">PostgreSQL</h3>
+<p>PostgreSQL es uno de los <strong>sistemas de bases de datos relacionales más avanzados del mercado</strong>.</p>
+<p>Destaca por:</p>
+<ul>
+<li>Software libre y de código abierto.</li>
+<li>Alto cumplimiento de los estándares SQL.</li>
+<li>Excelente rendimiento.</li>
+<li>Soporte para procedimientos almacenados.</li>
+<li>Funciones avanzadas de análisis de datos.</li>
+</ul>
+<p>Es muy utilizado en aplicaciones empresariales y servicios web de gran escala.</p>
+<hr />
+<h3 id="mysql">MySQL</h3>
+<p>MySQL es probablemente el gestor relacional <strong>más popular en entornos web</strong>.</p>
+<p>Sus principales características son:</p>
+<ul>
+<li>Facilidad de uso.</li>
+<li>Amplia comunidad de usuarios.</li>
+<li>Gran integración con PHP y otros lenguajes.</li>
+<li>Buen rendimiento en aplicaciones web.</li>
+</ul>
+<p>Muchas aplicaciones basadas en el modelo LAMP utilizan MySQL como motor de base de datos.</p>
+<hr />
+<h3 id="sql-server">SQL Server</h3>
+<p>SQL Server es el sistema gestor desarrollado por Microsoft.</p>
+<p>Entre sus ventajas destacan:</p>
+<ul>
+<li><strong>Excelente integración con el ecosistema Microsoft</strong>.</li>
+<li>Herramientas gráficas avanzadas.</li>
+<li>Seguridad empresarial.</li>
+<li>Integración con Power BI y Azure.</li>
+</ul>
+<p>Es frecuente en grandes organizaciones que trabajan con tecnologías Microsoft.</p>
+<hr />
+<h3 id="oracle-database">Oracle Database</h3>
+<p>Oracle es uno de los gestores de bases de datos empresariales más potentes.</p>
+<p>Sus características principales son:</p>
+<ul>
+<li>Alta escalabilidad.</li>
+<li>Elevada disponibilidad.</li>
+<li>Gestión avanzada de grandes volúmenes de datos.</li>
+<li>Amplio uso en banca, telecomunicaciones y administraciones públicas.</li>
+</ul>
+<p>Tradicionalmente ha sido la opción elegida para entornos críticos de misión.</p>
+<hr />
+<h1 id="relacion-con-aws">Relación con AWS</h1>
+<p>En entornos cloud, las bases de datos relacionales siguen siendo fundamentales. AWS ofrece servicios administrados que permiten desplegar motores relacionales sin necesidad de gestionar directamente los servidores.</p>
+<p>Según la planificación del módulo MP5162, el alumnado trabaja específicamente con <strong>Amazon RDS</strong> y <strong>Amazon Aurora</strong> para administrar bases de datos relacionales en la nube.</p>
+<h2 id="amazon-rds">Amazon RDS</h2>
+<p>Amazon Relational Database Service (RDS) es un servicio administrado que simplifica la creación y administración de bases de datos relacionales.</p>
+<p>Con RDS, AWS se encarga de tareas como:</p>
+<ul>
+<li>Instalación del motor de base de datos.</li>
+<li>Copias de seguridad.</li>
+<li>Actualizaciones.</li>
+<li>Monitorización.</li>
+<li>Recuperación ante fallos.</li>
+</ul>
+<p>RDS permite utilizar diferentes motores como:</p>
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>MariaDB</li>
+<li>Oracle Database</li>
+<li>Microsoft SQL Server</li>
+</ul>
+<p>De esta forma, los administradores pueden centrarse en los datos y las aplicaciones en lugar de la gestión de la infraestructura.</p>
+<hr />
+<h2 id="amazon-aurora">Amazon Aurora</h2>
+<p>Amazon Aurora es una base de datos relacional desarrollada por AWS y compatible con MySQL y PostgreSQL.</p>
+<p>Su objetivo es ofrecer:</p>
+<ul>
+<li>Mayor rendimiento.</li>
+<li>Mayor disponibilidad.</li>
+<li>Escalado automático.</li>
+<li>Réplicas de lectura integradas.</li>
+<li>Recuperación rápida ante fallos.</li>
+</ul>
+<p>Aurora se considera una evolución de los motores relacionales tradicionales adaptada específicamente para la nube.</p>
+<p>Dentro del módulo de administración de bases de datos y almacenamiento en la nube se contempla expresamente la creación y administración de clústeres de Amazon Aurora como una competencia práctica fundamental.</p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>Las bases de datos relacionales continúan siendo la tecnología de referencia para el almacenamiento estructurado de información. El modelo relacional proporciona mecanismos sólidos para representar entidades, establecer relaciones y garantizar la integridad de los datos mediante claves primarias y foráneas. Gracias al lenguaje SQL, es posible manipular y consultar grandes volúmenes de información de forma eficiente.</p>
+<p>Aunque los entornos cloud han transformado la infraestructura tecnológica, los principios fundamentales del modelo relacional permanecen inalterados. Servicios como Amazon RDS y Amazon Aurora demuestran cómo las bases de datos relacionales han evolucionado hacia modelos gestionados y altamente escalables, manteniendo la misma filosofía que las ha convertido en una de las tecnologías más importantes de la historia de la informática.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

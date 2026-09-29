@@ -1,0 +1,1182 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rgcenteno.github.io/ABDAN-Introduccion/">
+      
+      
+      
+        <link rel="next" href="02-Almacenamiento-bloques/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UD0. Repaso general</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduccion-al-almacenamiento-de-datos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="UD0. Repaso general" class="md-header__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UD0. Repaso general
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduccion
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="UD0. Repaso general" class="md-nav__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    UD0. Repaso general
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-evolucion-historica-del-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Evolución histórica del almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Evolución histórica del almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-almacenamiento-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1. Almacenamiento local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-nas-network-attached-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2. NAS (Network Attached Storage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-san-storage-area-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3. SAN (Storage Area Network)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-almacenamiento-distribuido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4. Almacenamiento distribuido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.5. Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-tendencias-actuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.6. Tendencias actuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-conceptos-basicos-del-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Conceptos básicos del almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Conceptos básicos del almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-capacidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Capacidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-rendimiento-iops-y-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Rendimiento: IOPS y Throughput
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2. Rendimiento: IOPS y Throughput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iops-inputoutput-operations-per-second" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IOPS (Input/Output Operations Per Second)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throughput
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-latencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3. Latencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-durabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4. Durabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.5. Disponibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-replicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.6. Replicación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.6. Replicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-geografica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación geográfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-sincrona-y-asincrona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación síncrona y asíncrona
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-Almacenamiento-bloques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03-Almacenamiento-archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04-Almacenamiento-objetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objetos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05-Almacenamiento-tabla-comparativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06-BBDD-Relacionales-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BBDDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07%20-%20NoSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NoSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-evolucion-historica-del-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Evolución histórica del almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Evolución histórica del almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-almacenamiento-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1. Almacenamiento local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-nas-network-attached-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2. NAS (Network Attached Storage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-san-storage-area-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3. SAN (Storage Area Network)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-almacenamiento-distribuido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4. Almacenamiento distribuido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.5. Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-tendencias-actuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.6. Tendencias actuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-conceptos-basicos-del-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Conceptos básicos del almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Conceptos básicos del almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-capacidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Capacidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-rendimiento-iops-y-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Rendimiento: IOPS y Throughput
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2. Rendimiento: IOPS y Throughput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iops-inputoutput-operations-per-second" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IOPS (Input/Output Operations Per Second)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throughput
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-latencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3. Latencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-durabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4. Durabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.5. Disponibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-replicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.6. Replicación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.6. Replicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-geografica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación geográfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-sincrona-y-asincrona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación síncrona y asíncrona
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-introduccion-al-almacenamiento-de-datos">1. Introducción al almacenamiento de datos</h1>
+<p>Desde los primeros sistemas informáticos, el almacenamiento ha constituido uno de los pilares fundamentales de la computación. Toda aplicación, servicio o sistema necesita <strong>conservar información</strong> para poder operar de forma útil y persistente. Sin mecanismos de almacenamiento, los datos desaparecerían al apagar un equipo, limitando enormemente las posibilidades de cualquier sistema informático.</p>
+<p>La <strong>evolución</strong> del almacenamiento ha estado estrechamente ligada al crecimiento de las organizaciones y al aumento continuo del volumen de información. A medida que las empresas comenzaron a depender cada vez más de aplicaciones digitales, bases de datos, servicios web y sistemas de comunicación, surgió la necesidad de almacenar mayores cantidades de datos de manera segura, accesible y eficiente.</p>
+<p>El almacenamiento moderno no solo debe conservar información. También debe garantizar:</p>
+<ul>
+<li>
+<p>Disponibilidad</p>
+</li>
+<li>
+<p>Integridad</p>
+</li>
+<li>
+<p>Protección frente a pérdidas</p>
+</li>
+<li>
+<p>Capacidad de crecimiento.</p>
+</li>
+</ul>
+<p>Estas necesidades han impulsado la aparición de diferentes modelos tecnológicos que han evolucionado desde soluciones locales simples hasta complejas infraestructuras distribuidas y servicios completamente gestionados en la nube. La importancia de estos modelos se refleja también en la transición formativa desde los sistemas tradicionales hacia arquitecturas cloud modernas.</p>
+<hr />
+<h2 id="11-evolucion-historica-del-almacenamiento">1.1. Evolución histórica del almacenamiento</h2>
+<p>La historia del almacenamiento puede entenderse como una búsqueda constante de soluciones capaces de gestionar <strong>cantidades crecientes de información con menores costes y mayor disponibilidad</strong>.</p>
+<p>En las primeras décadas de la informática, el almacenamiento se encontraba físicamente conectado al propio equipo que generaba o utilizaba los datos. Posteriormente aparecieron soluciones específicas para compartir información a través de la red, permitiendo que varios sistemas accedieran simultáneamente a los mismos recursos. Con el crecimiento de Internet, la virtualización y los centros de datos, surgieron nuevas arquitecturas capaces de distribuir la información entre múltiples servidores y ubicaciones geográficas.</p>
+<p>Actualmente, los sistemas de almacenamiento han evolucionado hacia modelos cloud en los que la infraestructura física deja de ser una preocupación para el usuario. Los recursos se consumen como servicios bajo demanda, escalando automáticamente según las necesidades y permitiendo una disponibilidad global de los datos. Esta evolución es precisamente uno de los fundamentos sobre los que se construye la computación en la nube moderna.</p>
+<p><img alt="image" src="imgs/das-nas-san.png" /></p>
+<hr />
+<h3 id="111-almacenamiento-local">1.1.1. Almacenamiento local</h3>
+<p>El almacenamiento local representa el modelo más sencillo y tradicional. En este enfoque, los dispositivos de almacenamiento se encuentran <strong>instalados directamente en el equipo que utiliza los datos</strong>.</p>
+<p>Durante muchos años, los discos duros mecánicos (HDD) constituyeron la principal tecnología de almacenamiento local. Posteriormente aparecieron las unidades de estado sólido (SSD), capaces de ofrecer velocidades considerablemente superiores gracias a la ausencia de componentes mecánicos.</p>
+<p>La principal ventaja de este modelo radica en su simplicidad. Los datos son accesibles directamente por el sistema operativo sin necesidad de utilizar redes o elementos intermedios. Esto proporciona una <strong>baja latencia y un elevado rendimiento para tareas locales</strong>.</p>
+<p>Sin embargo, conforme las organizaciones crecieron, el almacenamiento local comenzó a mostrar importantes limitaciones. Cada servidor mantenía su propia <strong>información de forma aislada, dificultando el intercambio de datos, las copias de seguridad centralizadas y la expansión de la capacidad disponible</strong>. Además, una avería en el equipo podía provocar la pérdida o indisponibilidad de la información almacenada.</p>
+<p>Estas limitaciones impulsaron la búsqueda de soluciones centralizadas capaces de compartir recursos entre múltiples usuarios y sistemas.</p>
+<hr />
+<h3 id="112-nas-network-attached-storage">1.1.2. NAS (Network Attached Storage)</h3>
+<p>El concepto de NAS, o <em>Network Attached Storage</em>, surge como respuesta a la necesidad de compartir archivos entre distintos usuarios a través de una red.</p>
+<p>Un dispositivo NAS puede entenderse como un servidor especializado cuyo propósito principal es almacenar y ofrecer archivos a otros equipos. En lugar de guardar la información en los discos de cada ordenador, los datos se almacenan de forma centralizada y se accede a ellos mediante <strong>protocolos de red como SMB, CIFS o NFS</strong>.</p>
+<p>Este enfoque simplifica enormemente la administración de la información dentro de una organización. Los usuarios pueden acceder a documentos comunes, compartir recursos y realizar copias de seguridad de manera más sencilla. Además, la ampliación de la capacidad puede realizarse en un único punto centralizado.</p>
+<p>Los sistemas NAS se hicieron especialmente populares en pequeñas y medianas empresas debido a su facilidad de despliegue y administración. Sin embargo, están orientados principalmente al almacenamiento de archivos y pueden presentar limitaciones cuando aplicaciones empresariales o bases de datos requieren grandes volúmenes de operaciones de entrada y salida.</p>
+<p>La necesidad de ofrecer un rendimiento superior para sistemas críticos llevó al desarrollo de arquitecturas especializadas conocidas como SAN.</p>
+<hr />
+<h3 id="113-san-storage-area-network">1.1.3. SAN (Storage Area Network)</h3>
+<p>Una SAN, o <em>Storage Area Network</em>, constituye una red dedicada exclusivamente al almacenamiento de datos.</p>
+<p>A diferencia de los sistemas NAS, donde los archivos se comparten a través de protocolos de red convencionales, una SAN proporciona acceso directo a bloques de almacenamiento. Desde la perspectiva del servidor, estos bloques <strong>se comportan como si fueran discos locales</strong>, aunque físicamente se encuentren en cabinas de almacenamiento remotas.</p>
+<p>Las SAN surgieron para responder a las necesidades de grandes organizaciones, centros de datos y aplicaciones críticas que <strong>requerían elevados niveles de rendimiento</strong>, disponibilidad y escalabilidad. Tecnologías como Fibre Channel o iSCSI permitieron crear infraestructuras de almacenamiento especializadas capaces de soportar bases de datos empresariales, plataformas de virtualización y sistemas de misión crítica.</p>
+<p>Este modelo introdujo un importante nivel de <strong>separación entre los servidores y los dispositivos de almacenamiento</strong>. Los recursos podían crecer de forma independiente, mejorando la gestión y optimizando el uso de la infraestructura.</p>
+<p>No obstante, las SAN suelen requerir hardware especializado, conocimientos avanzados de administración y costes elevados de implantación y mantenimiento.</p>
+<p>En resumen, SAN entrega volúmenes de almacenamiento (LUNs) como discos físicos vacíos a un único servidor, el cual debe formatearlos y, si desea compartirlos, compartirlos en red vía SMB o NFS. </p>
+<p>La única excepción en la que podríamos conectar varios servidores simultáneamente a la misma LUN es utilizar un sistema de archivos en clúster (como VMFS).</p>
+<hr />
+<h3 id="114-almacenamiento-distribuido">1.1.4. Almacenamiento distribuido</h3>
+<p>El crecimiento de Internet y de los grandes proveedores de servicios digitales planteó nuevos desafíos. Las arquitecturas tradicionales comenzaron a resultar insuficientes para gestionar <strong>volúmenes masivos de información</strong> y garantizar una <strong>disponibilidad continua a escala global</strong>.</p>
+<p>El almacenamiento distribuido surge como una solución basada en la distribución de los datos entre múltiples sistemas físicos. En lugar de depender de un único servidor o cabina de almacenamiento, la información se replica y fragmenta entre numerosos nodos conectados.</p>
+<p>Este modelo ofrece importantes ventajas. Si un nodo falla, otros pueden continuar proporcionando acceso a la información. Además, el crecimiento de la capacidad ya no depende de sustituir equipos por otros mayores, sino de <strong>añadir nuevos nodos al sistema</strong> (escalabilidad horizontal).</p>
+<p>Conceptos como replicación, tolerancia a fallos, alta disponibilidad y escalabilidad horizontal se convierten en elementos fundamentales de estas arquitecturas. Sistemas como Hadoop HDFS, Ceph o GlusterFS representan ejemplos destacados de almacenamiento distribuido.</p>
+<p>Las bases tecnológicas desarrolladas en este ámbito constituyen el fundamento de muchas de las plataformas cloud actuales.</p>
+<p><img alt="image" src="imgs/Estructura_almacenamiento_distribuido.png" /></p>
+<hr />
+<h3 id="115-cloud-storage">1.1.5. Cloud Storage</h3>
+<p>El almacenamiento en la nube representa la evolución natural de las arquitecturas distribuidas. En este modelo, los recursos de almacenamiento son <strong>ofrecidos como un servicio por proveedores especializados</strong>, eliminando para las organizaciones la necesidad de gestionar directamente la infraestructura física. Este cambio forma parte de la transición desde los modelos tradicionales hacia infraestructuras y servicios cloud modernos.</p>
+<p>El usuario no necesita conocer la ubicación exacta de los discos ni los servidores que almacenan los datos. Simplemente consume capacidad bajo demanda mediante interfaces web, APIs o herramientas de administración proporcionadas por el proveedor.</p>
+<p>Los servicios actuales de almacenamiento cloud suelen clasificarse en tres grandes categorías:</p>
+<ul>
+<li>Almacenamiento de objetos.</li>
+<li>Almacenamiento de bloques.</li>
+<li>Almacenamiento de archivos.</li>
+</ul>
+<p>La principal característica de este modelo es la abstracción de la infraestructura. Los proveedores se encargan de aspectos como la redundancia, la replicación geográfica, la seguridad física, el mantenimiento y la ampliación de capacidad.</p>
+<p>Además, el almacenamiento cloud permite adoptar modelos de pago por uso, ajustando los costes al consumo real de recursos. Esto proporciona una gran flexibilidad para organizaciones de cualquier tamaño y facilita la creación de servicios distribuidos a escala global.</p>
+<p>Actualmente, plataformas como AWS, Microsoft Azure o Google Cloud constituyen la referencia en este ámbito, ofreciendo servicios capaces de almacenar desde pequeños ficheros hasta enormes volúmenes de datos utilizados en analítica, inteligencia artificial y aplicaciones empresariales de alcance mundial.</p>
+<hr />
+<h3 id="116-tendencias-actuales">1.1.6. Tendencias actuales</h3>
+<p>El almacenamiento continúa evolucionando hacia modelos cada vez más automatizados, distribuidos y orientados al servicio. Las organizaciones demandan infraestructuras capaces de crecer dinámicamente, integrarse con aplicaciones nativas de nube y proporcionar altos niveles de disponibilidad sin incrementar la complejidad administrativa.</p>
+<p>En este contexto, conceptos como almacenamiento híbrido, multinube, almacenamiento definido por software y servicios gestionados se han convertido en elementos clave de las arquitecturas modernas. El objetivo ya no consiste únicamente en conservar información, sino en facilitar su acceso, análisis y explotación de forma segura, eficiente y escalable.</p>
+<p>Como resultado, el almacenamiento ha pasado de ser un simple componente hardware a convertirse en una de las capas estratégicas más importantes de cualquier infraestructura tecnológica actual.</p>
+<h2 id="12-conceptos-basicos-del-almacenamiento">1.2. Conceptos básicos del almacenamiento</h2>
+<p>Para diseñar, administrar o seleccionar una solución de almacenamiento es necesario comprender una serie de conceptos fundamentales que determinan su comportamiento y calidad de servicio. Estos parámetros permiten evaluar si una tecnología de almacenamiento es adecuada para un determinado entorno, ya sea un servidor local, una cabina SAN, un sistema distribuido o una plataforma cloud.</p>
+<p>En la actualidad, los proveedores de servicios en la nube ofrecen múltiples opciones de almacenamiento que pueden diferenciarse precisamente por aspectos como la capacidad, el rendimiento, la latencia, la durabilidad o la disponibilidad. Estos criterios son utilizados habitualmente para dimensionar infraestructuras y seleccionar la solución más adecuada para cada caso de uso.</p>
+<hr />
+<h3 id="121-capacidad">1.2.1. Capacidad</h3>
+<p>La capacidad representa la cantidad máxima de información que un sistema de almacenamiento puede conservar. Tradicionalmente se mide en bytes y sus múltiplos, siendo habituales unidades como gigabytes (GB), terabytes (TB) o petabytes (PB).</p>
+<p>Durante muchos años, la capacidad fue uno de los principales criterios de selección de un sistema de almacenamiento. Las organizaciones buscaban disponer de suficiente espacio para albergar sistemas operativos, aplicaciones, documentos y bases de datos. Sin embargo, el crecimiento constante del volumen de información ha convertido la capacidad en un requisito estratégico.</p>
+<p>La necesidad de almacenar grandes cantidades de datos se ha visto impulsada por la digitalización de procesos empresariales, el comercio electrónico, los servicios multimedia, el Internet de las Cosas (IoT) y los sistemas de análisis masivo de datos. En consecuencia, los entornos modernos deben ser capaces de <strong>ampliar su capacidad de forma flexible</strong> sin interrumpir el servicio.</p>
+<p>En los sistemas tradicionales, aumentar la capacidad implicaba instalar nuevos discos o sustituir los existentes por otros de mayor tamaño. En los entornos cloud, por el contrario, la capacidad puede ampliarse dinámicamente mediante el aprovisionamiento de nuevos recursos, permitiendo una escalabilidad prácticamente ilimitada. Esta capacidad de crecer bajo demanda constituye una de las principales ventajas de las arquitecturas modernas de almacenamiento.</p>
+<hr />
+<h3 id="122-rendimiento-iops-y-throughput">1.2.2. Rendimiento: IOPS y Throughput</h3>
+<p>Aunque la capacidad determina cuánto puede almacenarse, no indica la velocidad con la que los datos pueden ser leídos o escritos. Para ello se utiliza el concepto de rendimiento.</p>
+<p>El rendimiento de un sistema de almacenamiento puede analizarse desde dos perspectivas complementarias: las operaciones de entrada y salida por segundo (IOPS) y el caudal o ancho de banda de transferencia (<em>throughput</em>).</p>
+<h4 id="iops-inputoutput-operations-per-second">IOPS (Input/Output Operations Per Second)</h4>
+<p>Las IOPS miden el número de <strong>operaciones de lectura y escritura que puede realizar un sistema en un segundo</strong>.</p>
+<p>Este indicador resulta especialmente <strong>importante en aplicaciones que realizan un gran número de accesos pequeños y frecuentes a los datos</strong>. Bases de datos transaccionales, servidores de correo electrónico o sistemas de virtualización suelen depender en gran medida de este parámetro.</p>
+<p>Cuantas más IOPS pueda proporcionar un sistema, mayor será su capacidad para responder a múltiples solicitudes simultáneas. Un disco SSD moderno puede ofrecer decenas de miles de IOPS, mientras que un disco mecánico tradicional presenta valores significativamente inferiores.</p>
+<h4 id="throughput">Throughput</h4>
+<p>El throughput representa la <strong>cantidad total de datos que puede transferirse por unidad de tiempo</strong>, normalmente expresada en MB/s o GB/s.</p>
+<p>Este parámetro es especialmente relevante en operaciones de transferencia masiva de datos, como copias de seguridad, procesamiento multimedia o análisis de grandes volúmenes de información.</p>
+<p>Mientras que las IOPS se centran en el número de operaciones realizadas, el throughput mide la cantidad de información transportada. Ambos parámetros son importantes y deben evaluarse conjuntamente, ya que una solución puede ofrecer muchas IOPS para archivos pequeños y, sin embargo, presentar un throughput limitado para transferencias de gran tamaño.</p>
+<p>En los entornos cloud modernos, muchos servicios permiten seleccionar diferentes niveles de rendimiento en función de las necesidades de cada carga de trabajo, equilibrando rendimiento y coste.</p>
+<hr />
+<h3 id="123-latencia">1.2.3. Latencia</h3>
+<p>La latencia es el <strong>tiempo que transcurre desde que un sistema solicita el acceso a un dato hasta que comienza a recibir una respuesta</strong>.</p>
+<p>Puede entenderse como el tiempo de espera asociado a cada operación de lectura o escritura. Cuanto menor sea la latencia, mayor será la sensación de rapidez del sistema.</p>
+<p>Un ejemplo sencillo es el acceso a una base de datos. Aunque un sistema pueda transferir grandes cantidades de información por segundo, si cada consulta requiere varios milisegundos para comenzar a ejecutarse, el rendimiento percibido por las aplicaciones se verá afectado.</p>
+<p>La latencia depende de numerosos factores:</p>
+<ul>
+<li>La tecnología utilizada por los dispositivos de almacenamiento.</li>
+<li>La distancia física entre cliente y servidor.</li>
+<li>La carga de trabajo existente.</li>
+<li>La infraestructura de red.</li>
+<li>Los mecanismos de seguridad o cifrado aplicados.</li>
+</ul>
+<p><strong>En entornos distribuidos y cloud, la ubicación geográfica adquiere especial relevancia</strong>. Por este motivo, los proveedores de nube permiten desplegar recursos en distintas regiones y zonas de disponibilidad para reducir los tiempos de acceso y mejorar la experiencia de los usuarios. La selección de regiones, zonas y mecanismos de replicación forma parte de los criterios habituales de diseño de almacenamiento en la nube.</p>
+<hr />
+<h3 id="124-durabilidad">1.2.4. Durabilidad</h3>
+<p>La durabilidad mide la <strong>probabilidad de que los datos permanezcan íntegros y recuperables a lo largo del tiempo</strong>.</p>
+<p>En otras palabras, indica la capacidad de un sistema para evitar la pérdida permanente de información.</p>
+<p>La durabilidad se convierte en un factor crítico cuando se almacenan datos de valor elevado, como información financiera, documentación legal, registros sanitarios o copias de seguridad corporativas.</p>
+<p>Para incrementar la durabilidad se emplean diferentes mecanismos:</p>
+<ul>
+<li>Replicación de datos.</li>
+<li>Sistemas <a href="https://es.wikipedia.org/wiki/RAID">RAID</a>.</li>
+<li>Verificación de integridad.</li>
+<li>Copias de seguridad.</li>
+<li>Distribución geográfica de la información.</li>
+</ul>
+<p>En los servicios cloud actuales, la durabilidad suele conseguirse mediante el almacenamiento simultáneo de múltiples copias de los datos en diferentes dispositivos e incluso en distintas ubicaciones físicas. De este modo, aunque se produzca una avería de hardware o un incidente local, la información continúa estando disponible y protegida. Los sistemas de almacenamiento en nube incorporan habitualmente mecanismos de replicación y copia de seguridad para garantizar la recuperación de la información cuando sea necesario.</p>
+<hr />
+<h3 id="125-disponibilidad">1.2.5. Disponibilidad</h3>
+<p>La disponibilidad expresa la <strong>capacidad de un servicio para permanecer accesible cuando los usuarios o aplicaciones lo necesitan</strong>.</p>
+<p>Mientras que la durabilidad se centra en evitar la pérdida de datos, la disponibilidad se refiere a la posibilidad de acceder a ellos de forma continua.</p>
+<p>Este concepto suele expresarse mediante <strong>porcentajes</strong>. Por ejemplo, una disponibilidad del 99,9 % implica que el servicio podrá experimentar únicamente breves interrupciones a lo largo del año.</p>
+<p>La disponibilidad depende de numerosos elementos:</p>
+<ul>
+<li>La fiabilidad del hardware.</li>
+<li>La redundancia de componentes.</li>
+<li>La existencia de copias de respaldo.</li>
+<li>Los sistemas de monitorización.</li>
+<li>Los mecanismos automáticos de recuperación.</li>
+</ul>
+<p>En los entornos modernos es habitual diseñar infraestructuras de alta disponibilidad utilizando múltiples servidores, redes redundantes y sistemas de almacenamiento replicados. El propio currículo del curso destaca la importancia de la disponibilidad como uno de los criterios fundamentales para el diseño de infraestructuras cloud, redes y servicios de almacenamiento.</p>
+<hr />
+<h3 id="126-replicacion">1.2.6. Replicación</h3>
+<p>La replicación consiste en <strong>mantener varias copias sincronizadas de los mismos datos en diferentes dispositivos, servidores o ubicaciones geográficas</strong>.</p>
+<p>Su principal objetivo es incrementar la disponibilidad, la tolerancia a fallos y la durabilidad de la información.</p>
+<p>Cuando una copia deja de estar disponible debido a una incidencia, otra réplica puede asumir su función sin afectar significativamente al servicio. Este mecanismo constituye uno de los fundamentos del almacenamiento distribuido y de la computación en la nube.</p>
+<p>Existen diferentes modalidades de replicación:</p>
+<h4 id="replicacion-local">Replicación local</h4>
+<p>Las copias se almacenan dentro de la misma instalación o centro de datos. Proporciona protección frente a fallos de hardware individuales, aunque no frente a desastres que afecten a toda la ubicación.</p>
+<h4 id="replicacion-geografica">Replicación geográfica</h4>
+<p>Las copias se distribuyen entre diferentes centros de datos o regiones geográficas.</p>
+<p>Este modelo ofrece una protección mucho mayor frente a incidencias de gran alcance y es ampliamente utilizado por los grandes proveedores cloud.</p>
+<h4 id="replicacion-sincrona-y-asincrona">Replicación síncrona y asíncrona</h4>
+<p>En la replicación <strong>síncrona, los cambios deben confirmarse en todas las copias antes de completarse la operación</strong><em>. Esto garantiza una </em><em>consistencia muy elevada</em>*.</p>
+<p>En la replicación <strong>asíncrona, los cambios se propagan posteriormente a las réplicas</strong>. Este enfoque suele proporcionar un <strong>mejor rendimiento</strong>, aunque puede existir un pequeño desfase temporal entre las distintas copias.</p>
+<p>La replicación es uno de los pilares sobre los que se construyen los servicios modernos de almacenamiento. Gracias a ella es posible garantizar elevados niveles de disponibilidad, recuperación ante fallos y protección frente a la pérdida de datos, características esenciales en cualquier infraestructura cloud actual. El currículo oficial incluye de forma reiterada la replicación como requisito clave en sistemas de almacenamiento, bases de datos, análisis de datos y arquitecturas resilientes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

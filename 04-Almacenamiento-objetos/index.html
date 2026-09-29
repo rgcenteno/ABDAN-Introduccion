@@ -1,0 +1,785 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rgcenteno.github.io/ABDAN-Introduccion/04-Almacenamiento-objetos/">
+      
+      
+        <link rel="prev" href="../03-Almacenamiento-archivos/">
+      
+      
+        <link rel="next" href="../05-Almacenamiento-tabla-comparativa/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Objetos - UD0. Repaso general</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-almacenamiento-de-objetos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UD0. Repaso general" class="md-header__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UD0. Repaso general
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Objetos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UD0. Repaso general" class="md-nav__button md-logo" aria-label="UD0. Repaso general" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    UD0. Repaso general
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Almacenamiento-bloques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-Almacenamiento-archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objetos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objetos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-concepto-de-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Concepto de objeto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Metadatos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-buckets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Buckets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-acceso-mediante-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Acceso mediante API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-escalabilidad-masiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Escalabilidad masiva
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Almacenamiento-tabla-comparativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-BBDD-Relacionales-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BBDDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20NoSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NoSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-concepto-de-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Concepto de objeto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Metadatos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-buckets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Buckets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-acceso-mediante-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Acceso mediante API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-escalabilidad-masiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Escalabilidad masiva
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-almacenamiento-de-objetos">4. Almacenamiento de objetos</h1>
+<h2 id="41-concepto-de-objeto">4.1 Concepto de objeto</h2>
+<p>El almacenamiento de objetos constituye <strong>uno de los pilares fundamentales</strong> de la computación en la nube moderna. A medida que las organizaciones comenzaron a generar cantidades masivas de información en forma de documentos, imágenes, vídeos, registros de actividad y copias de seguridad, los sistemas tradicionales de almacenamiento basados en ficheros o bloques empezaron a mostrar limitaciones en cuanto a escalabilidad y gestión.</p>
+<p>Para solucionar este problema surgió el modelo de almacenamiento de objetos. En este enfoque, cada elemento almacenado se trata como una entidad independiente denominada <strong>objeto</strong>. Un objeto no contiene únicamente los datos del archivo, sino también <strong>información adicional</strong> que permite identificarlo, clasificarlo y administrarlo dentro de la plataforma. Este modelo <strong>hace posible almacenar cantidades prácticamente ilimitadas de información distribuidas entre múltiples servidores y centros de datos</strong>. La administración de este tipo de almacenamiento forma parte de los contenidos que trataremos en este módulo.</p>
+<p>Desde el punto de vista conceptual, una fotografía, un vídeo, un documento PDF o una copia de seguridad completa de un servidor pueden considerarse objetos. Todos ellos se almacenan de la misma manera, independientemente de su contenido o formato.</p>
+<p>A diferencia de los sistemas de archivos tradicionales, donde la ubicación física de los datos y la estructura de directorios tienen una gran importancia, <strong>en el almacenamiento de objetos lo relevante es la identificación única del objeto</strong> y la capacidad de recuperarlo cuando sea necesario. Gracias a esta filosofía es posible gestionar enormes repositorios de información con una complejidad muy reducida para los usuarios y administradores.</p>
+<p><img alt="image" src="../imgs/esquema-almacenamiento-objetos.png" /></p>
+<hr />
+<h2 id="42-metadatos">4.2 Metadatos</h2>
+<p>Uno de los elementos más importantes asociados a un objeto son los <strong>metadatos</strong>. Se denomina metadato a cualquier información adicional utilizada para describir o clasificar un dato almacenado.</p>
+<p>Cuando un archivo se guarda dentro de una plataforma de almacenamiento de objetos, no solamente se conserva su <strong>contenido</strong>. También se almacenan multitud de características relacionadas con él, como la fecha de creación, el tamaño, el propietario, el tipo de contenido o cualquier información personalizada que la organización considere útil.</p>
+<p>Ejemplo de metadados:</p>
+<table>
+<thead>
+<tr>
+<th>Metadato</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre</td>
+<td>foto.jpg</td>
+</tr>
+<tr>
+<td>Tamaño</td>
+<td>5 MB</td>
+</tr>
+<tr>
+<td>Fecha creación</td>
+<td>15/09/2026</td>
+</tr>
+<tr>
+<td>Tipo de contenido</td>
+<td>image/jpeg</td>
+</tr>
+<tr>
+<td>Propietario</td>
+<td>Departamento Marketing</td>
+</tr>
+<tr>
+<td>Etiquetas</td>
+<td>Proyecto-Web</td>
+</tr>
+</tbody>
+</table>
+<p>Los metadatos permiten que los objetos puedan <strong>localizarse, clasificarse y administrarse de forma eficiente</strong>. En un entorno empresarial donde pueden existir millones de documentos almacenados, resulta <strong>inviable depender exclusivamente del nombre de los archivos para encontrarlos</strong>. Gracias a los metadatos es posible buscar información según criterios muy variados, aplicar políticas automáticas de gestión o restringir el acceso a determinados conjuntos de datos.</p>
+<p>En los entornos cloud modernos, los metadatos también desempeñan un papel fundamental en tareas como la monitorización, la auditoría, el gobierno del dato y la automatización de procesos. El currículo oficial contempla expresamente el uso de etiquetas y metadatos como parte de la administración de sistemas de almacenamiento de objetos.</p>
+<p>Por ejemplo, una imagen utilizada por el departamento de marketing podría almacenar información sobre la campaña publicitaria a la que pertenece, el idioma en el que será utilizada o la fecha prevista para su eliminación automática. Toda esta información se almacena como metadatos asociados al objeto.</p>
+<hr />
+<h2 id="43-buckets">4.3 Buckets</h2>
+<p>Los objetos necesitan un mecanismo que permita organizarlos dentro de la plataforma de almacenamiento. Para ello se utilizan contenedores lógicos denominados <strong>buckets</strong>, también conocidos como depósitos.</p>
+<p><img alt="image" src="../imgs/bucket.png" /></p>
+<p>Un bucket puede entenderse como una <strong>agrupación de objetos relacionados</strong>. Aunque desde la perspectiva del usuario podría parecer una carpeta tradicional, internamente su funcionamiento es diferente. El bucket <strong>actúa como una unidad administrativa sobre la que se aplican configuraciones de seguridad, cifrado, replicación, monitorización o control de acceso</strong>.</p>
+<p>Cuando una organización comienza a utilizar almacenamiento de objetos suele crear distintos buckets para separar la información según su finalidad. Por ejemplo, puede existir un bucket dedicado a copias de seguridad, otro para almacenar imágenes de una aplicación web y un tercero destinado al almacenamiento de documentos corporativos.</p>
+<p>La elección de los nombres de los buckets, así como su configuración de seguridad y ciclo de vida, es una de las tareas más importantes dentro de la administración de este tipo de sistemas. En este módulo aprenderemos a definir contenedores o buckets, gestionar sus configuraciones y aplicar políticas de retención y seguridad.</p>
+<p>Además de servir como elemento organizativo, los buckets constituyen <strong>el punto de entrada habitual para las aplicaciones y usuarios que necesitan almacenar o recuperar información desde la nube</strong>.</p>
+<hr />
+<h2 id="44-acceso-mediante-api">4.4 Acceso mediante API</h2>
+<p>Una de las diferencias más importantes entre el almacenamiento de objetos y los sistemas de almacenamiento tradicionales es <strong>la forma en la que se accede a la información</strong>.</p>
+<p>Mientras que en un servidor convencional los archivos suelen accederse mediante rutas del sistema operativo, las plataformas de almacenamiento de objetos utilizan normalmente <strong>API</strong> (Application Programming Interface). Estas interfaces permiten que aplicaciones, servicios y usuarios interactúen con el almacenamiento mediante solicitudes realizadas a través de la red.</p>
+<p>La mayoría de proveedores cloud implementan APIs basadas en protocolos HTTP y HTTPS. Gracias a ello, cualquier aplicación capaz de realizar peticiones web puede interactuar con el sistema de almacenamiento.</p>
+<p>Las operaciones más comunes consisten en subir objetos, descargarlos, eliminarlos o listar el contenido de un bucket. Estas acciones pueden ejecutarse desde aplicaciones web, herramientas de línea de comandos, librerías de programación o plataformas de automatización.</p>
+<p>Gracias a este modelo de acceso, el almacenamiento de objetos se integra fácilmente con plataformas de análisis de datos, aplicaciones móviles, sistemas de inteligencia artificial o servicios de automatización empresarial.</p>
+<hr />
+<h2 id="45-escalabilidad-masiva">4.5 Escalabilidad masiva</h2>
+<p>La principal razón por la que el almacenamiento de objetos se ha convertido en el modelo predominante dentro de la nube es su <strong>extraordinaria capacidad de escalado</strong>.</p>
+<p>En los sistemas tradicionales el crecimiento suele requerir la incorporación de nuevos discos, servidores o cabinas de almacenamiento. Este proceso implica planificación, adquisición de hardware y tareas de mantenimiento que aumentan la complejidad de la infraestructura.</p>
+<p>El almacenamiento de objetos adopta una filosofía completamente diferente. <strong>Los datos se distribuyen automáticamente entre múltiples servidores, zonas de disponibilidad e incluso centros de datos distintos</strong>. Esta distribución es transparente para el usuario, que percibe el sistema como una única plataforma de almacenamiento.</p>
+<p>Gracias a este diseño, la capacidad disponible puede crecer desde unos pocos megabytes hasta varios petabytes sin necesidad de modificar la arquitectura de las aplicaciones que utilizan el servicio. La infraestructura subyacente es gestionada por el proveedor cloud, mientras que el usuario únicamente se preocupa por almacenar y recuperar información.</p>
+<p>La enorme escalabilidad de este modelo se complementa con mecanismos de replicación automática, alta disponibilidad y tolerancia a fallos. Por este motivo, el almacenamiento de objetos se ha convertido en una solución especialmente adecuada para organizaciones que manejan grandes volúmenes de información o que experimentan crecimientos impredecibles de datos.</p>
+<hr />
+<h1 id="46-casos-de-uso">4.6 Casos de uso</h1>
+<h2 id="backups">Backups</h2>
+<p>Las copias de seguridad son uno de los usos más habituales del almacenamiento de objetos. Una copia de seguridad suele requerir grandes cantidades de espacio, un elevado nivel de durabilidad y costes reducidos de almacenamiento.</p>
+<p>El modelo de almacenamiento de objetos satisface perfectamente estos requisitos. Los proveedores cloud suelen ofrecer mecanismos de replicación, cifrado y retención automática que permiten <strong>conservar la información durante largos periodos de tiempo con un coste relativamente bajo</strong>.</p>
+<p>Por esta razón, muchas organizaciones almacenan en sistemas de objetos las copias de seguridad de servidores, bases de datos, estaciones de trabajo o aplicaciones corporativas. El currículo oficial incluye la planificación de procesos de copia de seguridad, retención y recuperación de datos en entornos cloud.</p>
+<hr />
+<h2 id="data-lakes">Data Lakes</h2>
+<p>Otro uso muy habitual es la construcción de <strong>Data Lakes</strong> o lagos de datos.</p>
+<p>Un Data Lake es un <strong>repositorio diseñado para almacenar grandes cantidades de información en su formato original, sin necesidad de transformarla previamente</strong>. Dentro de él pueden convivir documentos, imágenes, registros de actividad, datos procedentes de sensores, hojas de cálculo o bases de datos completas.</p>
+<p>El almacenamiento de objetos resulta especialmente adecuado para este escenario debido a su capacidad para gestionar enormes volúmenes de información a bajo coste y con una gran flexibilidad.</p>
+<p>Posteriormente, estos datos pueden ser utilizados por herramientas de análisis, inteligencia artificial o sistemas de explotación de información para obtener conocimiento útil para la organización.</p>
+<hr />
+<h2 id="web-estatica">Web estática</h2>
+<p>El almacenamiento de objetos también se puede utilizar para alojar sitios web estáticos.</p>
+<p>Una web estática está formada por archivos HTML, hojas de estilo, código JavaScript e imágenes que no requieren procesamiento dinámico en el servidor. En estos casos no es necesario mantener una infraestructura compleja de servidores web.</p>
+<p>Los archivos pueden almacenarse directamente dentro de un bucket y ser servidos a los usuarios a través de Internet. Esta solución proporciona un elevado rendimiento, una gran disponibilidad y costes muy reducidos.</p>
+<p>Actualmente numerosas páginas corporativas, portales informativos y sitios de documentación utilizan almacenamiento de objetos como plataforma principal de publicación.</p>
+<hr />
+<h2 id="multimedia">Multimedia</h2>
+<p>El contenido multimedia constituye otro de los escenarios más habituales para este tipo de almacenamiento.</p>
+<p>Fotografías, vídeos, contenido de audio o material educativo suelen ocupar grandes cantidades de espacio y requieren una distribución eficiente a usuarios situados en distintas regiones geográficas.</p>
+<p>El almacenamiento de objetos permite conservar este contenido de forma altamente disponible y combinarlo con servicios de distribución de contenidos (CDN), obteniendo tiempos de acceso reducidos incluso para millones de usuarios simultáneos.</p>
+<p>Por este motivo es una tecnología ampliamente utilizada en plataformas de streaming, redes sociales, repositorios de imágenes y servicios de distribución multimedia.</p>
+<hr />
+<h1 id="47-ventajas-e-inconvenientes">4.7 Ventajas e inconvenientes</h1>
+<p>La principal ventaja del almacenamiento de objetos es su <strong>capacidad para escalar prácticamente sin límites</strong>, permitiendo gestionar cantidades masivas de información con una administración relativamente sencilla. A ello se suman su elevada disponibilidad, la integración con el resto de servicios cloud y la posibilidad de aplicar mecanismos de seguridad, cifrado y automatización de forma centralizada.</p>
+<p>Otra característica especialmente valiosa es la <strong>durabilidad</strong>. Los proveedores cloud suelen almacenar varias copias de los objetos en distintas ubicaciones físicas, reduciendo significativamente el riesgo de pérdida de información.</p>
+<p>Sin embargo, este modelo también presenta ciertas limitaciones. El <strong>acceso a los datos suele ser más lento que en el almacenamiento en bloques</strong> utilizado por sistemas operativos o bases de datos de alto rendimiento. Por este motivo no resulta adecuado para almacenar discos de arranque ni para aplicaciones que requieren operaciones continuas de lectura y escritura con baja latencia.</p>
+<p>Asimismo, al tratarse de servicios accesibles a través de la red, existe una <strong>dependencia directa de la conectividad</strong> y de los mecanismos de autenticación proporcionados por la plataforma.</p>
+<hr />
+<h1 id="48-equivalencia-en-aws-amazon-s3">4.8 Equivalencia en AWS: Amazon S3</h1>
+<p>En el ecosistema de AWS, el servicio que implementa el modelo de almacenamiento de objetos es <strong>Amazon S3 (Simple Storage Service)</strong>. Este servicio constituye uno de los componentes fundamentales de la plataforma y aparece explícitamente en la planificación del módulo MP5162 como la tecnología de referencia para el estudio del almacenamiento de objetos.</p>
+<p>Amazon S3 organiza la información mediante buckets y objetos, permitiendo aplicar políticas de seguridad, cifrado, control de versiones, replicación y ciclo de vida. Su diseño está orientado a proporcionar una elevada durabilidad y una escalabilidad prácticamente ilimitada.</p>
+<p>Dentro del curso se contemplan actividades relacionadas con la creación y administración de buckets, la configuración de versionado, la replicación de datos y la aplicación de políticas automáticas de gestión del ciclo de vida de los objetos.</p>
+<p>Además de utilizarse como almacenamiento general, Amazon S3 sirve como base para numerosos servicios de AWS relacionados con análisis de datos, inteligencia artificial, distribución de contenido multimedia, copias de seguridad y recuperación ante desastres. De hecho, gran parte de las arquitecturas cloud modernas utilizan S3 como repositorio central de información.</p>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<p>El almacenamiento de objetos es un modelo diseñado para gestionar grandes cantidades de información de forma distribuida, escalable y altamente disponible. La información se almacena en forma de objetos independientes que contienen tanto los datos como sus metadatos asociados. Estos objetos se organizan dentro de buckets y se accede a ellos mediante APIs estandarizadas. Gracias a su capacidad de crecimiento prácticamente ilimitada, se ha convertido en la solución predominante para escenarios como copias de seguridad, Data Lakes, alojamiento web estático y distribución de contenido multimedia. En AWS, la implementación más representativa de este modelo es Amazon S3.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
