@@ -1,4 +1,5 @@
 site_name: "UD0. Repaso general"
+site_url: https://rgcenteno.github.io/ABDAN-Introduccion/
 theme:
   name: material
   locale: "es"
