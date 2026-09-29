@@ -3,6 +3,17 @@ site_url: https://rgcenteno.github.io/ABDAN-Introduccion/
 theme:
   name: material
   locale: "es"
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Cambiar a modo oscuro
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo light
 nav:
     - Introduccion: "index.md"
     - Bloques: "02-Almacenamiento-bloques.md"
